@@ -1,93 +1,53 @@
-<!doctype html>
-
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8">
+<style>
+* {
+    box-sizing: border-box;
+}
 
-  <title>GoCryp.to</title>
+body {
+    margin: 0;
+}
 
-  <link rel="stylesheet" href="css/reset.css?v=1.0">
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+}
 
-  
-  
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
 
-  
-  <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-  <![endif]-->
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+</style>
 </head>
-
 <body>
-  
 
-  
-    <div class="row">
-   <script type="text/javascript">
-baseUrl = "https://widgets.cryptocompare.com/";
-var scripts = document.getElementsByTagName("script");
-var embedder = scripts[ scripts.length - 1 ];
-var cccTheme = {"General":{"background":"#253137","priceText":"#ebeef0"},"Currency":{"color":"#9999e6"},"Trend":{"colorUp":"#00ff00","colorDown":"#ff0000"},"Menu":{"triggerBackground":"#465a65"}};
-(function (){
-var appName = encodeURIComponent(window.location.hostname);
-if(appName==""){appName="local";}
-var s = document.createElement("script");
-s.type = "text/javascript";
-s.async = true;
-var theUrl = baseUrl+'serve/v2/coin/header?fsyms=BTC,ETH,XRP,BCH&tsyms=USD,EUR,CNY,KRW';
-s.src = theUrl + ( theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
-embedder.parentNode.appendChild(s);
-})();
-</script>
-    </div>
-  
-  
-  <div class="row">
-  
-    
-  <div class="column"></div>
-  <div class="column">  <script type="text/javascript">
-baseUrl = "https://widgets.cryptocompare.com/";
-var scripts = document.getElementsByTagName("script");
-var embedder = scripts[ scripts.length - 1 ];
-var cccTheme = {"General":{"background":"#121212","borderColor":"#000"},"Tabs":{"background":"#000","color":"#FFF","borderColor":"#333","activeBackground":"#333","activeColor":"#FFF"},"Row":{"color":"#FFF","borderColor":"#585858"},"Conversion":{"background":"#000","color":"#CCC"}};
-(function (){
-var appName = encodeURIComponent(window.location.hostname);
-if(appName==""){appName="local";}
-var s = document.createElement("script");
-s.type = "text/javascript";
-s.async = true;
-var theUrl = baseUrl+'serve/v1/coin/multi?fsyms=XRP,XRB,XVG&tsyms=EUR,USD,CNY,GBP';
-s.src = theUrl + ( theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
-embedder.parentNode.appendChild(s);
-})();
-</script></div>
+<h2>Responsive Two Column Layout</h2>
+<p>Resize the browser window to see the responsive effect (the columns will stack on top of each other instead of floating next to each other, when the screen is less than 600px wide).</p>
+
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <h2>Column 1</h2>
+    <p>Some text..</p>
   </div>
-  
-  
-  
-  
-  <div class="row">
- 
-    
-    <div class="column"></div>
-    
-    
-    
-    
-  
-  <div class="column"></div>
-  <div class="column">  
+  <div class="column" style="background-color:#bbb;">
+    <h2>Column 2</h2>
+    <p>Some text..</p>
   </div>
+</div>
 
-  
-  
-  
-  
-
-
-
-  
 </body>
 </html>
